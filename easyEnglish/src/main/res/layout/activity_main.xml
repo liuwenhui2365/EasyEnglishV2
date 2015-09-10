@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <!--图片下面的小点-->
+    <LinearLayout
+        android:id="@+id/ll_dot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/vpage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/iv_01"
+            android:contentDescription="@string/wait"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/blue"/>
+        <ImageView
+            android:id="@+id/iv_02"
+            android:contentDescription="@string/wait"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/gray"/>
+        <ImageView
+            android:id="@+id/iv_03"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/wait"
+            android:src="@drawable/gray"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

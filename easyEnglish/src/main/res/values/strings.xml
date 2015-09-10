@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AutoTanslate</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="already_share">已接受的分享</string>
+    <string name="down">下拉图片</string>
+    <string name="up">上拉图片</string>
+    <string name="classify">请输入分类名称</string>
+    <string name="waiting">请稍候正在加载。。。</string>
+    <string name="action_settings">返回</string>
+    <string name="word_list">this is words list</string>
+    <string name="open">打开菜单</string>
+    <string name="close">关闭菜单</string>
+
+    <color name="black">#ff070508</color>
+    <color name="white">#ffffffff</color>
+    <color name="red">#ffff0000</color>
+    <color name="lightred">#ffff8163</color>
+    <color name="grey">#161b1531</color>
+
+    <string name="title_activity_classify">主页</string>
+    <string name="article_list">文章列表</string>
+    <string name="message">Message</string>
+    <string name="title_activity_classify_item2">classifyItem2</string>
+    <string name="keji">科技</string>
+    <string name="education">教育</string>
+    <string name="nature">自然</string>
+    <string name="licai">理财</string>
+    <string name="jiankang">健康</string>
+    <string name="yule">娱乐</string>
+    <string name="jingji">经济</string>
+    <string name="history">历史</string>
+    <string name="other">其他</string>
+    <string name="select">choose</string>
+    <string name="state">当前time：</string>
+    <string name="refresh">正在刷新</string>
+    <string name="wait">请等待正在加载图片。。。</string>
+    <string name="up_refresh">正在读数据。。。</string>
+    <string name="down_refresh">正在从网络获取数据。。。</string>
+    <string name="title_activity_refresh">Refresh</string>
+    <string name="title_activity_word_classify">WordClassify</string>
+    <string name="title_activity_menu_test">MenuTest</string>
+    <string name="title_activity_word_meaning">WordMeaning</string>
+    <string name="title_activity_share">Share</string>
+    <string name="title_activity_acceptshare">分享到的内容</string>
+    <string name="title_activity_already_accept_share">AlreadyAcceptShare</string>
+    <string name="title_activity_share_message">ShareMessage</string>
+
+</resources>

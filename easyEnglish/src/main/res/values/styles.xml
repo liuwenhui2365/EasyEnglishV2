@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!--<item name="android:actionBarTabBarStyle">@color/white</item>-->
+        <!--<item name="android:actionBarSize">10dp</item>-->
+        <!--<item name="android:actionBarStyle">@color/white</item>-->
+
+    </style>
+
+    <declare-styleable name="MyGifView">
+        <attr name="isgifimage" format="boolean"/>
+    </declare-styleable>
+
+</resources>

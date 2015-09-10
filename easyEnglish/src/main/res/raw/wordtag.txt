@@ -1,0 +1,37 @@
+CC 	conj
+CD 	num
+DT 	pron
+EX 	pron
+FW	null
+IN 	conj
+JJ 	adj
+JJR 	adj
+JJS 	adj
+LS	null
+MD 	aux
+NN 	n
+NN$ 	null
+NNS 	n
+NNP	n
+NNPS	n
+PDT	null
+POS	null
+PRP	pron
+PRP$	null
+RB 	adv
+RBR 	adv
+RBS	adv
+RP 	adv
+SYM	null
+TO 	prep
+UH 	int
+VB 	vi  vt
+VBD 	v
+VBG 	v
+VBN 	v
+VBP	null
+VBZ 	v  vi vt
+WDT 	adj pron
+WP	pron
+WP$ 	pron
+WRB     adv

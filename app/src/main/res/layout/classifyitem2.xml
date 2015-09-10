@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true">
+    <TableRow
+        android:layout_weight="1"
+        android:layout_marginBottom="5dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/button21"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ab"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:textSize="25sp"
+            android:text="@string/keji"/>
+
+        <Button
+            android:id="@+id/button22"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cd"
+            android:textSize="25sp"
+            android:text="@string/jiankang"/>
+
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:layout_marginBottom="5dp"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/button23"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ab2"
+            android:textSize="25sp"
+            android:text="@string/jingji"/>
+
+        <Button
+            android:id="@+id/button24"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cd"
+            android:textSize="25sp"
+            android:text="@string/history"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:layout_marginBottom="5dp"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/button25"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ab"
+            android:textSize="25sp"
+            android:text="@string/licai"/>
+
+        <Button
+            android:id="@+id/button26"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ab2"
+            android:textSize="25sp"
+            android:text="@string/yule"/>
+
+    </TableRow>
+</TableLayout>

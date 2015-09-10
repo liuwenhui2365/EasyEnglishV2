@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ab.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ab2.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/application_hicon.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/application_icon.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/application_icon1.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/application_micon.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/application_xhicon.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/application_xxhicon.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/blue.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/cd.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/economy.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/education.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/gray.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/health.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/img1.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/img2.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/img3.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/nature.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/refresh.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/set.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/share.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/technology.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/tubiao.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/welcome1.gif" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/welcome2.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/welcome3.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_already_accept_share.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_classify.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu_test.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_message.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_refresh.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_share.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_share_message.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_word_classify.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_word_meaning.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/classifyitem1.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/classifyitem2.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/classifyitem3.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/footview.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/headerview.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/item1.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/item2.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/item3.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/list_view.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/lsitviewitem.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/menulistitem.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/wordlistviewitem.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/menu/raw" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/raw" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/raw/additional.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/raw/english.pdf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/raw/glyphlist.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/raw/zapfdingbats.txt" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
