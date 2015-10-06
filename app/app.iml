@@ -96,6 +96,6 @@
     <orderEntry type="library" exported="" name="core-1.52.0.0" level="project" />
     <orderEntry type="library" exported="" name="pkix-1.52.0.0" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-21.0.2" level="project" />
-    <orderEntry type="library" exported="" name="pdfbox-android-1.8.9.0-sources" level="project" />
+    <orderEntry type="library" exported="" name="litepal-1.2.1" level="project" />
   </component>
 </module>

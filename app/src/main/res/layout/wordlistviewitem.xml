@@ -1,34 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:background="@color/white"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:descendantFocusability="blocksDescendants">
 
     <TextView
-        android:id="@+id/word"
-        android:textSize="20sp"
-        android:gravity="center_vertical|start"
-        android:layout_width="0dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_weight="2"
-        android:layout_height="50dp" />
-
-    <Button
-        android:id="@+id/TogButton"
-        android:layout_weight="1"
-        android:layout_width="5dp"
-        android:focusable="false"
-        android:clickable="true"
-        android:focusableInTouchMode="true"
+        android:id="@+id/word_initial"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_gravity="center_vertical"
-        android:background="@color/grey"
-        android:text="@string/select"
-    />
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="@color/grey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/word"
+            android:textSize="20sp"
+            android:gravity="center_vertical|start"
+            android:layout_width="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="2"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/TogButton"
+            android:layout_weight="1"
+            android:layout_width="5dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/grey"
+            android:text="@string/select"
+            />
+    </LinearLayout>
+
 
 </LinearLayout>

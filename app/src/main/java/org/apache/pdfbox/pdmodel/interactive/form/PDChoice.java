@@ -286,7 +286,7 @@ public abstract class PDChoice extends PDVariableText
 	 * Determines if Sort is set.
 	 * 
 	 * <p>
-	 * If set, the field’s option items shall be sorted alphabetically.
+	 * If set, the fields option items shall be sorted alphabetically.
 	 * The sorting has to be done when writing the PDF. PDF Readers are supposed to
 	 * display the options in the order in which they occur in the Opt array.
 	 * </p>

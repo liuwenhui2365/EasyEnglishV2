@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:background="@color/white"
+    tools:context="com.example.liu.autotanslate.WordClassify">
+
+    <TextView
+        android:id="@+id/remind"
+        android:text="@string/word_list"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/word_search"
+        android:textSize="14sp"
+        android:layout_below="@id/remind"
+        android:hint="@string/word_search_remind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.liu.easyenglishupdate.view.CustomListView
+        android:layout_below="@id/word_search"
+        android:id="@+id/word_list"
+        android:background="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <com.liu.easyenglishupdate.view.SideBar
+        android:id="@+id/word_side_bar"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/word_initial_display"
+        android:background="@color/grey"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_width="80dp"
+        android:layout_height="80dp"/>
+</RelativeLayout>

@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">EasyReadEnglishUpdate</string>
+    <string name="app_name">易读英语</string>
 
     <string name="title_section1">left_1</string>
-    <string name="title_section2">left_2</string>
+    <string name="title_section2">pdf解析</string>
     <string name="title_section3">left_3</string>
     <string name="title_section4">left_4</string>
 
@@ -10,13 +10,14 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="fragment_main">This is main fragment!</string>
-    <string name="fragment_bottom1">底部导航1</string>
-    <string name="fragment_bottom2">底部导航2</string>
-    <string name="fragment_bottom3">底部导航3</string>
-    <string name="fragment_bottom4">底部导航4</string>
+    <string name="fragment_bottom1">分类阅读</string>
+    <string name="fragment_bottom2">分类资讯</string>
+    <string name="fragment_bottom3">已解析文档</string>
+    <string name="fragment_bottom4">已分享文章</string>
     <string name="action_example">Example action</string>
 
     <string name="action_settings">Settings</string>
+    <string name="action_back">返回</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="already_share">已接受的分享</string>
@@ -33,8 +34,9 @@
     <color name="red">#ffff0000</color>
     <color name="lightred">#ffff8163</color>
     <color name="grey">#161b1531</color>
-
+<!--主页-->
     <string name="title_activity_classify">主页</string>
+    <string name="press_back_again">再按一次返回键退出</string>
     <string name="article_list">文章列表</string>
     <string name="message">Message</string>
     <string name="title_activity_classify_item2">classifyItem2</string>
@@ -61,4 +63,24 @@
     <string name="title_activity_acceptshare">分享到的内容</string>
     <string name="title_activity_already_accept_share">AlreadyAcceptShare</string>
     <string name="title_activity_share_message">ShareMessage</string>
+    <string name="title_activity_pdf_parse">pdf解析</string>
+
+    <string name="title_activity_logo">LogoActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+<!--pdf解析-->
+    <string name="pdf_parse_waiting">正在解析中。。。</string>
+    <string name="pdf_parse_already">文档已经解析！</string>
+    <string name="file_manager_not_exist">还没有安装文件管理器</string>
+
+    <!--单词分类页面-->
+    <string name="word_unknow">unknow</string>
+    <string name="word_know">know</string>
+    <string name="word_tag">word</string>
+    <string name="meaning_tag">meaning</string>
+    <string name="no_load_now">还没有加载到当前索引哦</string>
+    <string name="word_search_remind">请输入所要查找的单词</string>
+    <!--显示文章内容页面-->
+    <string name="content_empty">文章内容为空！</string>
+    <string name="article_empty">当前没有文章！</string>
 </resources>

@@ -1886,7 +1886,7 @@ public class PDFTextStripper extends PDFTextStreamEngine
 	 * Note that the number of entries in that list may differ from the number of characters in the
 	 * string due to normalization.
 	 *
-	 * @author Axel D�rfler
+	 * @author Axel Drfler
 	 */
 	private static final class WordWithTextPositions
 	{

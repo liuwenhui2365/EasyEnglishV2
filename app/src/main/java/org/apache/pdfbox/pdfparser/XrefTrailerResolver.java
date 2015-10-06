@@ -35,7 +35,7 @@ import android.util.Log;
  * using {@link #setStartxref(long)}. This is used to build the chain of
  * active xref/trailer objects used for creating document trailer and xref table.
  *
- * @author Timo Böhme
+ * @author Timo Bhme
  */
 public class XrefTrailerResolver
 {

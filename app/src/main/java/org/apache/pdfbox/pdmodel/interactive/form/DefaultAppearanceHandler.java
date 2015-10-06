@@ -31,7 +31,7 @@ import org.apache.pdfbox.pdfparser.PDFStreamParser;
  * The default appearance, an inheritable attribute contained in the dictionaries
  * /DA entry, contains any graphics state or text state operators needed
  * to establish the graphics state parameters, such as text size
- * and color, for displaying the field’s variable text.
+ * and color, for displaying the fields variable text.
  * <p>
  * Allowed operators are all which are permitted in text objects.
  * The Tf operator is required specifying the font and the font size

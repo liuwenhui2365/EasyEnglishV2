@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="easyEnglish"></dbname>
+
+    <version value="4"></version>
+    <list>
+        <mapping class="com.liu.easyenglishupdate.entity.Article"></mapping>
+        <mapping class="com.liu.easyenglishupdate.entity.Word"></mapping>
+        <mapping class="com.liu.easyenglishupdate.entity.WordTag"></mapping>
+    </list>
+</litepal>
