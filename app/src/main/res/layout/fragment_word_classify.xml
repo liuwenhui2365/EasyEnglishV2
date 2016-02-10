@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <com.liu.easyenglishupdate.view.CustomListView
+    <com.liu.easyenglishupdate.view.AutoListView
         android:layout_below="@id/word_search"
         android:id="@+id/word_list"
         android:background="@color/grey"

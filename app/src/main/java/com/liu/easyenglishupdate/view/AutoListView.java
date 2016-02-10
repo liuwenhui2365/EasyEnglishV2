@@ -25,19 +25,15 @@ import com.liu.easyenglishupdate.util.Util;
 
 public class AutoListView extends ListView implements OnScrollListener {
 
-	// 区分当前操作是刷新还是加载
-	public static final int REFRESH = 0;
-	public static final int LOAD = 1;
-
 	// 区分PULL和RELEASE的距离的大小
 	private static final int SPACE = 20;
 
 	// 定义header的四种状态和当前状态
-	private static final int NONE = 0;
-	private static final int PULL = 1;
-	private static final int RELEASE = 2;
-	private static final int REFRESHING = 3;
-	private int state;
+	private static final int NONE = 0; // 正常状态；
+	private static final int PULL = 1;// 提示下拉状态；
+	private static final int RELEASE = 2;// 提示释放状态；
+	private static final int REFRESHING = 3;// 正在刷新状态；
+	private int state; //当前状态
 
 	private LayoutInflater mInflater;
 	private View mViewHeader;
@@ -71,7 +67,10 @@ public class AutoListView extends ListView implements OnScrollListener {
 	 */
 	private boolean mIsRefresh = true;
 	private boolean mIsLoading;// 判断是否正在加载
-	private boolean mLoadEnable = true;// 开启或者关闭加载更多功能
+	/**
+	 * 开启或者关闭加载更多功能
+	 */
+	private boolean mLoadEnable = true;
 	private boolean mIsLoadFull;
 	private int mPageSize = 10;
 
@@ -183,21 +182,25 @@ public class AutoListView extends ListView implements OnScrollListener {
 
 	public void onLoad() {
 		if (mOnLoadListener != null) {
+			//在这里设置正在加载标志位，不能在调用onLoad之后再设置true，否则一直true
+			mIsLoading = true;
 			mOnLoadListener.onLoad();
 		}
 	}
 
-	public void onRefreshComplete(String updateTime) {
-		mTxtLastUpdate.setText(this.getContext().getString(R.string.last_update_time,
-				Util.getCurrentTime()));
-		state = NONE;
-		refreshHeaderViewByState();
-	}
+//	public void onRefreshComplete(String updateTime) {
+//		mTxtLastUpdate.setText(getContext().getString(R.string.last_update_time)+":"+updateTime);
+//		state = NONE;
+//		refreshHeaderViewByState();
+//	}
 
 	// 用于下拉刷新结束后的回调
 	public void onRefreshComplete() {
-		String currentTime = Util.getCurrentTime();
-		onRefreshComplete(currentTime);
+//		String currentTime = Util.getCurrentTime();
+//		onRefreshComplete(currentTime);
+		mTxtLastUpdate.setText(getContext().getString(R.string.refresh_complete));
+		state = NONE;
+		refreshHeaderViewByState();
 	}
 
 	// 用于加载更多结束后的回调
@@ -214,11 +217,11 @@ public class AutoListView extends ListView implements OnScrollListener {
 	@Override
 	public void onScrollStateChanged(AbsListView view, int scrollState) {
 		this.mScrollState = scrollState;
-		ifNeedLoad(view, scrollState);
+		isNeedLoad(view, scrollState);
 	}
 
 	// 根据listview滑动的状态判断是否需要加载更多
-	private void ifNeedLoad(AbsListView view, int scrollState) {
+	private void isNeedLoad(AbsListView view, int scrollState) {
 		if (!mLoadEnable) {
 			return;
 		}
@@ -228,9 +231,11 @@ public class AutoListView extends ListView implements OnScrollListener {
 					&& view.getLastVisiblePosition() == view
 					.getPositionForView(mViewFooter) && !mIsLoadFull) {
 				onLoad();
-				mIsLoading = true;
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
+			//出现异常修改正在加载标志位
+			mIsLoading =false;
 		}
 	}
 
@@ -270,7 +275,9 @@ public class AutoListView extends ListView implements OnScrollListener {
 		return super.onTouchEvent(ev);
 	}
 
-	// 解读手势，刷新header状态
+	/**
+	 *   解读手势，刷新header状态
+	 */
 	private void whenMove(MotionEvent ev) {
 		if (!mIsRecorded) {
 			return;
@@ -347,6 +354,16 @@ public class AutoListView extends ListView implements OnScrollListener {
 
 	// 根据当前状态，调整header
 	private void refreshHeaderViewByState() {
+
+//		RotateAnimation anim = new RotateAnimation(0, 180, RotateAnimation.RELATIVE_TO_SELF, 0.5f,
+//				RotateAnimation.RELATIVE_TO_SELF, 0.5f);
+//		anim.setDuration(500);
+//		anim.setFillAfter(true);
+//
+//		RotateAnimation anim1 = new RotateAnimation(180, 0, RotateAnimation.RELATIVE_TO_SELF, 0.5f,
+//				RotateAnimation.RELATIVE_TO_SELF, 0.5f);
+//		anim1.setDuration(500);
+//		anim1.setFillAfter(true);
 		switch (state) {
 		case NONE:
 			topPadding(-mHeaderContentHeight);

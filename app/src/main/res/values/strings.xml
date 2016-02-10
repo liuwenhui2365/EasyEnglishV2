@@ -131,6 +131,7 @@
 
     <string name="title_activity_change_info">ChangeInfoActivity</string>
     <string name="last_update_time">上次更新时间</string>
+    <string name="refresh_complete">刷新完成</string>
     <string name="pull_to_refresh">下拉刷新获取数据</string>
     <string name="release_to_refresh">释放刷新数据</string>
 </resources>

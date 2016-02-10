@@ -6,7 +6,6 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -19,7 +18,7 @@ import com.example.liu.easyreadenglishupdate.R;
 import com.liu.easyenglishupdate.adapter.WordAdapter;
 import com.liu.easyenglishupdate.entity.Word;
 import com.liu.easyenglishupdate.util.Util;
-import com.liu.easyenglishupdate.view.CustomListView;
+import com.liu.easyenglishupdate.view.AutoListView;
 import com.liu.easyenglishupdate.view.SideBar;
 
 import org.litepal.crud.DataSupport;
@@ -31,10 +30,10 @@ import java.util.List;
  * 单词及意思显示页面
  * 实现上拉加载更多
  */
-public class WordClassifyFragment extends Fragment implements CustomListView.OnLoaderListener {
+public class WordClassifyFragment extends Fragment implements AutoListView.OnLoadListener {
 
     private List<Word> wordsList = new ArrayList<>();
-    private CustomListView mCustomListView = null;
+    private AutoListView mAutoListView = null;
     private EditText mEdtSearch = null;
     private TextView textView = null;
     /**
@@ -98,7 +97,7 @@ public class WordClassifyFragment extends Fragment implements CustomListView.OnL
                 //字母首次出现的位置
                 int position = mWordAdapter.getPositionForSection(s.charAt(0));
                 if (position != -1) {
-                    mCustomListView.setSelection(position);
+                    mAutoListView.setSelection(position);
                 }else{
                     Util.showToast(getActivity(),R.string.no_load_now);
                 }
@@ -112,7 +111,7 @@ public class WordClassifyFragment extends Fragment implements CustomListView.OnL
         showWordView(view);
         // 注意顺序，否则在初始化时只能读取一次，只有再进去才能读
         wordNum = DataSupport.count(Word.class);
-
+        Util.d("单词总数",":"+wordNum);
 
     }
 
@@ -139,17 +138,17 @@ public class WordClassifyFragment extends Fragment implements CustomListView.OnL
     }
 
     public void showWordView(View view){
-        mCustomListView = (CustomListView)view.findViewById(R.id.word_list);
-        mCustomListView.setIsRefresh(false);
+        mAutoListView = (AutoListView) view.findViewById(R.id.word_list);
+        mAutoListView.setIsRefresh(false);
         mWordAdapter = new WordAdapter(getActivity(), (ArrayList<Word>)wordsList);
 //      注意是不为空的时候
         if(!mWordAdapter.isEmpty()){
             mWordAdapter.notifyDataSetChanged();
-            mCustomListView.setAdapter(mWordAdapter);
+            mAutoListView.setAdapter(mWordAdapter);
         }
 
-        mCustomListView.setLoaderListener(this);
-        mCustomListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mAutoListView.setOnLoadListener(this);
+        mAutoListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 //              这里的View就是ListView中item的 View
@@ -168,7 +167,7 @@ public class WordClassifyFragment extends Fragment implements CustomListView.OnL
     }
 
     public void readWord(int firstIndex, int perReadNum){
-        Util.d("上拉加载", "开始获取单词");
+        Util.d("上拉加载", "开始获取单词索引值");
         long start = System.currentTimeMillis();
         List wordsListTemp = DataSupport.limit(perReadNum).offset(firstIndex).find(Word.class);
         Util.d("上拉加载", "结束获取获取单词");
@@ -199,14 +198,8 @@ public class WordClassifyFragment extends Fragment implements CustomListView.OnL
         }
 
         Util.d("上拉刷新 begin" + fromIndex, "end" + (fromIndex + perReadNum));
-        mCustomListView.loadComplete();
-
-    }
-
-    @Override
-    public void onReflash() {
-        //下拉刷新不用
-        mCustomListView.reflashComplete();
+        mWordAdapter.notifyDataSetChanged();
+        mAutoListView.onLoadComplete();
     }
 
     @Override
