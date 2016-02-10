@@ -10,7 +10,10 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Article extends DataSupport{
+/**
+ * 文章序列化实现对象传输
+ */
+public class Article extends DataSupport implements Serializable{
 
     /**
      * 文章类，描述关于文章的信息
@@ -25,6 +28,7 @@ public class Article extends DataSupport{
     private String time;
     private String catalogy;
     private String level;
+    private String url;
     private int difficultRatio;
 
     public Article(){
@@ -63,6 +67,13 @@ public class Article extends DataSupport{
         this.difficultRatio = 100;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
     public String getTitle() {
         return title;
@@ -126,6 +137,20 @@ public class Article extends DataSupport{
         }
 
         return words;
+
+    }
+
+
+    /**
+     *     把文章内容为String类型的转为Arraylist类型的
+     */
+    public ArrayList<String> getWordsBySpace(){
+        ArrayList<String> wordsList = new ArrayList<String>();
+        String [] words = body.split(" ");
+        for (int i = 0; i<words.length; i++){
+            wordsList.add(words[i]);
+        }
+        return wordsList;
 
     }
 }

@@ -75,6 +75,7 @@ public class EasyEnglishDB{
 
     /**
      * save all wordsTag data
+     * remove empty
      *
      * @return  true is success  otherise
      */
@@ -94,8 +95,8 @@ public class EasyEnglishDB{
                 // 防止出现不符合规范的
                 if (wordTagArray.length == 2) {
                     WordTag wordTag = new WordTag();
-                    wordTag.setOldTag(wordTagArray[0]);
-                    wordTag.setNewTag(wordTagArray[1]);
+                    wordTag.setOldTag(wordTagArray[0].trim());
+                    wordTag.setNewTag(wordTagArray[1].trim());
                     wordTag.save();
                 }
             }

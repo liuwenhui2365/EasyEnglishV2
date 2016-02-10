@@ -11,18 +11,22 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.liu.easyreadenglishupdate.R;
+import com.liu.easyenglishupdate.view.CircleImageView;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -54,6 +58,14 @@ public class NavigationDrawerFragment extends Fragment {
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerListView;
+    /**
+     * 用户昵称
+     */
+    private TextView mTxtUserNick;
+    /**
+     * 当前UI
+     */
+    private View mLeftNavView;
     private View mFragmentContainerView;
 
     private int mCurrentSelectedPosition = 0;
@@ -78,7 +90,8 @@ public class NavigationDrawerFragment extends Fragment {
         }
 
         // Select either the default item (0) or the last selected item.
-        selectItem(mCurrentSelectedPosition);
+        //开始进来不要执行
+//        selectItem(mCurrentSelectedPosition);
     }
 
     @Override
@@ -91,8 +104,27 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         mDrawerListView = (ListView) inflater.inflate(
                 R.layout.fragment_navigation_drawer, container, false);
+        //加头像和昵称(必须在设置适配器前添加)
+        CircleImageView circleImage = new CircleImageView(getActivity().getApplicationContext());
+        AbsListView.LayoutParams CircleLayout = new AbsListView.LayoutParams(80, 80);
+        circleImage.setLayoutParams(CircleLayout);
+        circleImage.setImageResource(R.drawable.ab);
+        AbsListView.LayoutParams nameLayoutParams = new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        TextView textName = new TextView(getActivity().getApplicationContext());
+        textName.setPadding(0,10,0,10);
+        textName.setText(R.string.user_nick);
+        textName.setTextSize(28);
+        textName.setGravity(Gravity.CENTER);
+        textName.setLayoutParams(nameLayoutParams);
+        mDrawerListView.addHeaderView(circleImage);
+        mDrawerListView.addHeaderView(textName);
+
+        //设置控件的点击事件(整个布局以ListView为主，如果通过findView方法就会报错，子VIew只能有一个父View)
+//        mTxtUserNick = (TextView)mLeftNavView.findViewById(R.id.navigation_drawer_nick);
+//        mDrawerListView = (ListView)mLeftNavView.findViewById(R.id.navigation_drawer_list);
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -107,8 +139,10 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.title_section1),
                         getString(R.string.title_section2),
                         getString(R.string.title_section3),
+                        getString(R.string.title_section4)
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
+
         return mDrawerListView;
     }
 

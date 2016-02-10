@@ -1,10 +1,6 @@
 package com.liu.easyenglishupdate.adapter;
 
 import android.app.Activity;
-import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

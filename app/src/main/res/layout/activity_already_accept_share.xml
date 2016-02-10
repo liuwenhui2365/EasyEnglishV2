@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/already"
-        android:textColor="@color/black"
+        android:textColor="@color/light_black"
         android:textSize="15sp"
         android:text="@string/already_share"
         android:layout_centerHorizontal="true"

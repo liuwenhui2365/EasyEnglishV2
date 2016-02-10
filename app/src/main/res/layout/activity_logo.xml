@@ -11,7 +11,6 @@
     <ImageView android:id="@+id/img_applicstion_icon"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:keepScreenOn="true"
-              android:layout_gravity="center"
+               android:layout_gravity="center"
               android:src="@drawable/application_icon"/>
 </FrameLayout>

@@ -16,6 +16,30 @@
         android:textSize="15sp" />
 
     <TextView
+        android:id="@+id/loadFull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/load_complete"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/load_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/load_more"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/noData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/up_refresh"
+        android:textSize="15sp" />
+
+    <TextView
         android:id="@+id/load_last_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,11 +57,6 @@
         android:src="@drawable/refresh"
         android:layout_toLeftOf="@id/loader"
         android:layout_toStartOf="@+id/loader"/>
-
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
     <ProgressBar
         android:id="@+id/pbLoaderWaiting"

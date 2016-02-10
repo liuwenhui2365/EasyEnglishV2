@@ -53,8 +53,12 @@ public class WordClassifyFragment extends Fragment implements CustomListView.OnL
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
+        //布局复用会造成切换fragment异常，提示移除子View
         if(mView == null){
             mView = inflater.inflate(R.layout.fragment_word_classify,null);
+        }else{
+            //把之前的View移除掉即可
+            ((ViewGroup)mView.getParent()).removeView(mView);
         }
         return mView;
     }
@@ -62,6 +66,7 @@ public class WordClassifyFragment extends Fragment implements CustomListView.OnL
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        ((MainActivity)getActivity()).setFragmentVisiblity(View.VISIBLE);
         mEdtSearch = (EditText)view.findViewById(R.id.word_search);
         mEdtSearch.addTextChangedListener(new TextWatcher() {
             @Override
@@ -94,6 +99,7 @@ public class WordClassifyFragment extends Fragment implements CustomListView.OnL
                 int position = mWordAdapter.getPositionForSection(s.charAt(0));
                 if (position != -1) {
                     mCustomListView.setSelection(position);
+                }else{
                     Util.showToast(getActivity(),R.string.no_load_now);
                 }
 
@@ -132,21 +138,6 @@ public class WordClassifyFragment extends Fragment implements CustomListView.OnL
         }
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     public void showWordView(View view){
         mCustomListView = (CustomListView)view.findViewById(R.id.word_list);
         mCustomListView.setIsRefresh(false);
@@ -170,6 +161,7 @@ public class WordClassifyFragment extends Fragment implements CustomListView.OnL
                 WordMeaning wordMeaning = new WordMeaning();
                 wordMeaning.setArguments(bundle);
                 ((MainActivity) getActivity()).setFragment(wordMeaning, true);
+                ((MainActivity) getActivity()).setFragmentVisiblity(View.GONE);
             }
 
         });
@@ -217,4 +209,9 @@ public class WordClassifyFragment extends Fragment implements CustomListView.OnL
         mCustomListView.reflashComplete();
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+
+    }
 }

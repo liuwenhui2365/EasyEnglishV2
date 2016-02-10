@@ -56,7 +56,7 @@ public class CustomListView extends ListView implements OnScrollListener {
 //        NULL Exception
 //        measureView(header);
         headerHeight = header.getMeasuredHeight();
-        footer.findViewById(R.id.list).setVisibility(View.GONE);
+//        footer.findViewById(R.id.list).setVisibility(View.GONE);
         topPadding(-headerHeight);
         this.addHeaderView(header);// 加到顶部
         this.addFooterView(footer);// 加到底部
@@ -77,7 +77,7 @@ public class CustomListView extends ListView implements OnScrollListener {
             if (!isLoading) {
                 isLoading = true;
                 footer.setVisibility(VISIBLE);
-                footer.findViewById(R.id.list).setVisibility(View.VISIBLE);
+//                footer.findViewById(R.id.list).setVisibility(View.VISIBLE);
                 loaderListener.onLoad();// 加载更多
             }
         }
@@ -270,7 +270,7 @@ public class CustomListView extends ListView implements OnScrollListener {
     public void loadComplete() {
         isLoading = false;
         footer.setVisibility(GONE);
-        footer.findViewById(R.id.list).setVisibility(View.GONE);
+//        footer.findViewById(R.id.list).setVisibility(View.GONE);
     }
 
     /**

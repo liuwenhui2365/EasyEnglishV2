@@ -9,6 +9,10 @@ import android.os.Message;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.RotateAnimation;
+import android.widget.ImageView;
 
 import com.example.liu.easyreadenglishupdate.R;
 import com.liu.easyenglishupdate.db.EasyEnglishDB;
@@ -33,7 +37,7 @@ public class LogoActivity extends Activity {
      *  the number of milliseconds to wait after
      * user interaction before hiding the system UI.
      */
-    private static final int AUTO_HIDE_DELAY_MILLIS = 3000;
+    private static final int AUTO_HIDE_DELAY_MILLIS = 4000;
     /**
      * 发送成功标志位
      */
@@ -51,7 +55,13 @@ public class LogoActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_logo);
 
-        final View controlsView = findViewById(R.id.img_applicstion_icon);
+        final ImageView controlsView = (ImageView)findViewById(R.id.img_applicstion_icon);
+        //后两个参数设置旋转点
+        //相对于自身
+        RotateAnimation rotateSelf= new RotateAnimation(0,360, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+        controlsView.startAnimation(AnimationUtils.loadAnimation(this,R.anim.animation));
+        controlsView.startAnimation(rotateSelf);
+
         initData();
         mHideHandler.sendEmptyMessageDelayed(FINISH_TASK,AUTO_HIDE_DELAY_MILLIS);
     }
@@ -73,7 +83,7 @@ public class LogoActivity extends Activity {
         }
 
 //        DataSupport.deleteAll(Article.class);
-        int num = DataSupport.count(Article.class);
+//        int num = DataSupport.count(Article.class);
     }
 
 
